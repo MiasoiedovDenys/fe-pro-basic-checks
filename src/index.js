@@ -51,20 +51,15 @@ export const reducerIf = function (action, value) {
 export const reducerSwitch = (action, string) => {
     switch (action) {
         case 'uppercase':
-            console.log(string.toUpperCase());
-            break;
+            return string.toUpperCase();
         case 'lowercase':
-            console.log(string.toLowerCase());
-            break;
+            return string.toLowerCase();
         case 'fence':
-            console.log(fenceString(string));
-            break;
+            return fenceString(string);
         case 'capitalize':
-            console.log(capitalizeString(string));
-            break;
+            return capitalizeString(string);
         default:
-            console.log(string);
-            break;
+            return string;
     }
 };
 
