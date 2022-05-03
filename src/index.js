@@ -3,7 +3,7 @@
  * @param {string} string
  * @returns {string}
  */
-export const capitalizeString = (string) => string.split(' ').map(string => string.substring(0, 1).toUpperCase() + string.substring(1)).join(' ');
+export const capitalizeString = (string) => string.split(' ').map(string => `${string.substring(0, 1).toUpperCase()}${string.substring(1)}`).join(' ');
 
 /**
  * Должна быть function declaration
@@ -14,9 +14,9 @@ export function fenceString(string) {
     let newString = '';
     for (let i = 0; i <= string.length - 1; i++) {
         if (i % 2 === 0) {
-            newString = newString + string[i].toLowerCase();
+            newString = `${newString}${string[i].toLowerCase()}`;
         } else {
-            newString = newString + string[i].toUpperCase();
+            newString = `${newString}${string[i].toUpperCase()}`;
         }
     }
     return newString;
